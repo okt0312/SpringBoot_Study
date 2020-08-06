@@ -9,8 +9,15 @@ import hello.hellospring.repository.MemoryMemberRepository;
 
 public class MemberService
 {
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    private final MemberRepository memberRepository;
     
+    
+    public MemberService(MemberRepository memberRepository)
+    {
+        super();
+        this.memberRepository = memberRepository;
+    }
+
     /**
      * 회원 가입
      * @param member
